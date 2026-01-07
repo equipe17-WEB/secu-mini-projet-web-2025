@@ -24,11 +24,29 @@
     </nav>
 
     <header class="hero">
-        <div class="hero-content">
-            <h1>Elevate Your <br>Style Journey</h1>
-            <p>Discover curated fashion pieces that define your unique aesthetic. From timeless classics to contemporary
-                trends.</p>
-            <a href="#products" class="btn-primary">Explore Collection</a>
+        <div class="hero-container container">
+            <div class="hero-text">
+                <span class="badge">Collection 2026</span>
+                <h1>Crafting <br><span>Digital Elegance</span></h1>
+                <p>Discover the intersection of high fashion and futuristic technology. Curated pieces for the modern
+                    pioneer.</p>
+                <div class="hero-btns">
+                    <a href="#products" class="btn-primary">Shop Collection</a>
+                    <a href="#about" class="btn-secondary">Our Story</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-img-wrapper glass">
+                    <img src="assets/hero.png" alt="NexStore Showcase">
+                </div>
+                <div class="floating-card glass">
+                    <div class="icon" style="background: var(--primary); width: 10px; height: 10px; border-radius: 50%;"></div>
+                    <div>
+                        <strong>New Drop</strong>
+                        <p>Limited Edition Tech-Wear</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
 
@@ -66,7 +84,102 @@
                 <p>Loading the future...</p>
             </div>
         </section>
+
+        <section id="about" class="about-section container">
+            <div class="about-content glass">
+                <div class="about-text">
+                    <h2 class="section-title" style="text-align: left;">Our Vision</h2>
+                    <p>At NexStore, we believe technology should be an extension of your persona. We curate pieces that
+                        blend
+                        high-performance engineering with avant-garde fashion aesthetics.</p>
+                    <div class="stats-row">
+                        <div class="stat-item">
+                            <strong>50k+</strong>
+                            <span>Global Fans</span>
+                        </div>
+                        <div class="stat-item">
+                            <strong>120+</strong>
+                            <span>Design Awards</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <img src="assets/hero.png" alt="NexStore Vision" style="filter: hue-rotate(45deg);">
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="testimonials-section container">
+            <h2 class="section-title">What Our Pioneers Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card glass">
+                    <div class="user-meta">
+                        <div class="avatar">OM</div>
+                        <div>
+                            <strong>Omar M.</strong>
+                            <p>Tech Enthusiast</p>
+                        </div>
+                    </div>
+                    <p class="review">"The design language of NexStore is years ahead. The delivery was almost
+                        instantaneous, and the product quality is beyond premium."</p>
+                    <div class="rating">⭐⭐⭐⭐⭐</div>
+                </div>
+                <div class="testimonial-card glass">
+                    <div class="user-meta">
+                        <div class="avatar">SL</div>
+                        <div>
+                            <strong>Sarah L.</strong>
+                            <p>Fashion Architect</p>
+                        </div>
+                    </div>
+                    <p class="review">"Finally, a store that understands the nexus of style and technology. Every item
+                        feels like a curated masterpiece."</p>
+                    <div class="rating">⭐⭐⭐⭐⭐</div>
+                </div>
+                <div class="testimonial-card glass">
+                    <div class="user-meta">
+                        <div class="avatar">AR</div>
+                        <div>
+                            <strong>Alex R.</strong>
+                            <p>Digital Pioneer</p>
+                        </div>
+                    </div>
+                    <p class="review">"The most secure and smooth shopping experience I've had. The interface is
+                        stunning and the products are even better in person."</p>
+                    <div class="rating">⭐⭐⭐⭐⭐</div>
+                </div>
+            </div>
+        </section>
     </main>
+
+    <footer class="main-footer">
+        <div class="footer-container container">
+            <div class="footer-brand">
+                <div class="logo">NexStore</div>
+                <p>Redefining digital retail for the 22nd century.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="cart.php">Cart</a></li>
+                    <li><a href="login.php">Login</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Follow Us</h4>
+                <ul>
+                    <li><a href="#">X / Twitter</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Discord</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom container">
+            <p>&copy; 2026 NexStore. All rights reserved. Developed with ❤️ by Equipe 17.</p>
+        </div>
+    </footer>
 
     <script src="assets/js/app.js"></script>
     <script>

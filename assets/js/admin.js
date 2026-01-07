@@ -1,3 +1,101 @@
+document.addEventListener("DOMContentLoaded", () => {
+    loadCharts();
+});
+
+async function loadCharts() {
+    try {
+        const response = await fetch('../api/get_stats.php');
+        const data = await response.json();
+
+        if (data.success) {
+            renderStockChart(data.stocks);
+            renderPriceChart(data.prices);
+            renderSalesChart(data.sales);
+        }
+    } catch (error) {
+        console.error('Error loading charts:', error);
+    }
+}
+
+function renderStockChart(stocks) {
+    const ctx = document.getElementById('stockChart').getContext('2d');
+    new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+            labels: stocks.map(s => s.category),
+            datasets: [{
+                data: stocks.map(s => s.total_stock),
+                backgroundColor: ['#d4a574', '#8b6f47', '#5c4a30', '#c89563'],
+                borderWidth: 0
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: { position: 'bottom', labels: { color: '#f8f8f8' } }
+            }
+        }
+    });
+}
+
+function renderPriceChart(prices) {
+    const ctx = document.getElementById('priceChart').getContext('2d');
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: prices.map(p => p.price_range),
+            datasets: [{
+                label: 'Products Count',
+                data: prices.map(p => p.count),
+                backgroundColor: '#d4a574',
+                borderRadius: 8
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                y: { beginAtZero: true, ticks: { color: '#f8f8f8' }, grid: { color: 'rgba(255,255,255,0.1)' } },
+                x: { ticks: { color: '#f8f8f8' }, grid: { display: false } }
+            },
+            plugins: {
+                legend: { display: false }
+            }
+        }
+    });
+}
+
+function renderSalesChart(sales) {
+    const ctx = document.getElementById('salesChart').getContext('2d');
+    new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: sales.map(s => s.label),
+            datasets: [{
+                label: 'Revenue ($)',
+                data: sales.map(s => s.value),
+                borderColor: '#d4a574',
+                backgroundColor: 'rgba(212, 165, 116, 0.2)',
+                fill: true,
+                tension: 0.4,
+                pointBackgroundColor: '#d4a574'
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                y: { beginAtZero: true, ticks: { color: '#f8f8f8' }, grid: { color: 'rgba(255,255,255,0.1)' } },
+                x: { ticks: { color: '#f8f8f8' }, grid: { display: false } }
+            },
+            plugins: {
+                legend: { labels: { color: '#f8f8f8' } }
+            }
+        }
+    });
+}
+
 function openAddModal() {
     document.getElementById('modalTitle').textContent = 'Add Product';
     document.getElementById('productForm').reset();

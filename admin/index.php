@@ -20,6 +20,7 @@ $categories = $pdo->query("SELECT * FROM categories")->fetchAll();
     <link rel="stylesheet" href="../assets/css/admin.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
         rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
@@ -38,9 +39,27 @@ $categories = $pdo->query("SELECT * FROM categories")->fetchAll();
                 <p style="color: var(--text-secondary);">Welcome, <?php echo htmlspecialchars($_SESSION['username']); ?>
                 </p>
             </div>
-            <div style="display: flex; gap: 1rem;">
+            <div style="display: flex; gap: 1.5rem; align-items: center;">
+                <a href="../index.php" class="btn-secondary" style="padding: 0.6rem 1.25rem; font-size: 0.85rem;">View
+                    Store</a>
                 <button class="btn-primary" onclick="openAddModal()">+ Add Product</button>
                 <a href="../api/logout.php" class="btn-logout">Logout</a>
+            </div>
+        </div>
+
+        <div class="stats-grid"
+            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
+            <div class="glass chart-container" style="padding: 1.5rem; height: 350px;">
+                <h3 style="margin-bottom: 1rem;">Stock by Category</h3>
+                <canvas id="stockChart"></canvas>
+            </div>
+            <div class="glass chart-container" style="padding: 1.5rem; height: 350px;">
+                <h3 style="margin-bottom: 1rem;">Price Distribution</h3>
+                <canvas id="priceChart"></canvas>
+            </div>
+            <div class="glass chart-container" style="padding: 1.5rem; height: 350px; grid-column: 1 / -1;">
+                <h3 style="margin-bottom: 1rem;">Weekly Sales Overview (Simulated)</h3>
+                <canvas id="salesChart"></canvas>
             </div>
         </div>
 
