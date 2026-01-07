@@ -15,7 +15,7 @@ $categories = $pdo->query("SELECT * FROM categories")->fetchAll();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard | NexStore</title>
+    <title>Admin Dashboard | RAMCORE</title>
     <link rel="stylesheet" href="../assets/css/global.css">
     <link rel="stylesheet" href="../assets/css/admin.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
@@ -25,7 +25,7 @@ $categories = $pdo->query("SELECT * FROM categories")->fetchAll();
 
 <body>
     <nav id="navbar" class="scrolled">
-        <div class="logo">NexStore Admin</div>
+        <div class="logo">RAMCORE Admin</div>
         <ul class="nav-links">
             <li><a href="../index.php">Store</a></li>
             <li><a href="index.php">Dashboard</a></li>

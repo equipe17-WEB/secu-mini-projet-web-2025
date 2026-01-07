@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NexStore | Premium Tech & Lifestyle</title>
+    <title>RAMCORE | Elite Memory Modules</title>
     <link rel="stylesheet" href="assets/css/global.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,7 +14,7 @@
 
 <body>
     <nav id="navbar">
-        <div class="logo">NexStore</div>
+        <div class="logo">RAMCORE</div>
         <ul class="nav-links">
             <li><a href="index.php">Home</a></li>
             <li><a href="#products">Products</a></li>
@@ -26,13 +26,13 @@
     <header class="hero">
         <div class="hero-container container">
             <div class="hero-text">
-                <span class="badge">Collection 2026</span>
-                <h1>Crafting <br><span>Digital Elegance</span></h1>
-                <p>Discover the intersection of high fashion and futuristic technology. Curated pieces for the modern
-                    pioneer.</p>
+                <span class="badge">DDR5 Overclocked Elite</span>
+                <h1>Pure <br><span>Digital Velocity</span></h1>
+                <p>Engineered for the elite. RAMCORE modules deliver the ultimate throughput for architects of the
+                    future.</p>
                 <div class="hero-btns">
-                    <a href="#products" class="btn-primary">Shop Collection</a>
-                    <a href="#about" class="btn-secondary">Our Story</a>
+                    <a href="#products" class="btn-primary">Explore Modules</a>
+                    <a href="#about" class="btn-secondary">Technical Specs</a>
                 </div>
             </div>
             <div class="hero-visual">
@@ -40,10 +40,11 @@
                     <img src="assets/hero.png" alt="NexStore Showcase">
                 </div>
                 <div class="floating-card glass">
-                    <div class="icon" style="background: var(--primary); width: 10px; height: 10px; border-radius: 50%;"></div>
+                    <div class="icon"
+                        style="background: var(--primary); width: 10px; height: 10px; border-radius: 50%;"></div>
                     <div>
-                        <strong>New Drop</strong>
-                        <p>Limited Edition Tech-Wear</p>
+                        <strong>Overclocked</strong>
+                        <p>Stable at 8000MT/s+</p>
                     </div>
                 </div>
             </div>
@@ -88,23 +89,21 @@
         <section id="about" class="about-section container">
             <div class="about-content glass">
                 <div class="about-text">
-                    <h2 class="section-title" style="text-align: left;">Our Vision</h2>
-                    <p>At NexStore, we believe technology should be an extension of your persona. We curate pieces that
-                        blend
-                        high-performance engineering with avant-garde fashion aesthetics.</p>
+                    <h2 class="section-title" style="text-align: left;">The Core Vision</h2>
+                    <p>At RAMCORE, we believe memory is the heartbeat of creation. We forge high-performance modules that eliminate bottlenecks for gamers, developers, and AI pioneers.</p>
                     <div class="stats-row">
                         <div class="stat-item">
-                            <strong>50k+</strong>
-                            <span>Global Fans</span>
+                            <strong>1.2ms</strong>
+                            <span>Ultra Latency</span>
                         </div>
                         <div class="stat-item">
-                            <strong>120+</strong>
-                            <span>Design Awards</span>
+                            <strong>8000+</strong>
+                            <span>MHz Stable</span>
                         </div>
                     </div>
                 </div>
                 <div class="about-visual">
-                    <img src="assets/hero.png" alt="NexStore Vision" style="filter: hue-rotate(45deg);">
+                    <img src="assets/hero.png" alt="RAMCORE Engineering" style="filter: contrast(110%);">
                 </div>
             </div>
         </section>
@@ -120,8 +119,7 @@
                             <p>Tech Enthusiast</p>
                         </div>
                     </div>
-                    <p class="review">"The design language of NexStore is years ahead. The delivery was almost
-                        instantaneous, and the product quality is beyond premium."</p>
+                    <p class="review">"The bandwidth on these RAMCORE sticks is unbelievable. My workstation handles 8K renders like they're nothing."</p>
                     <div class="rating">⭐⭐⭐⭐⭐</div>
                 </div>
                 <div class="testimonial-card glass">
@@ -132,8 +130,7 @@
                             <p>Fashion Architect</p>
                         </div>
                     </div>
-                    <p class="review">"Finally, a store that understands the nexus of style and technology. Every item
-                        feels like a curated masterpiece."</p>
+                    <p class="review">"RAMCORE finally fixed my latencies. It's the only brand I trust for my competitive overclocking builds."</p>
                     <div class="rating">⭐⭐⭐⭐⭐</div>
                 </div>
                 <div class="testimonial-card glass">
@@ -144,8 +141,7 @@
                             <p>Digital Pioneer</p>
                         </div>
                     </div>
-                    <p class="review">"The most secure and smooth shopping experience I've had. The interface is
-                        stunning and the products are even better in person."</p>
+                    <p class="review">"Zero errors at XMP profiles. The heat spreaders actually work and look absolutely stunning in my rig."</p>
                     <div class="rating">⭐⭐⭐⭐⭐</div>
                 </div>
             </div>
@@ -155,8 +151,8 @@
     <footer class="main-footer">
         <div class="footer-container container">
             <div class="footer-brand">
-                <div class="logo">NexStore</div>
-                <p>Redefining digital retail for the 22nd century.</p>
+                <div class="logo">RAMCORE</div>
+                <p>Hyper-performance memory for the next generation of computing.</p>
             </div>
             <div class="footer-links">
                 <h4>Quick Links</h4>
@@ -177,7 +173,7 @@
             </div>
         </div>
         <div class="footer-bottom container">
-            <p>&copy; 2026 NexStore. All rights reserved. Developed with ❤️ by Equipe 17.</p>
+            <p>&copy; 2026 RAMCORE. All rights reserved. Developed with ❤️ by Equipe 17.</p>
         </div>
     </footer>
 

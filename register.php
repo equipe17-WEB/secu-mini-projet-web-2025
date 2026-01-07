@@ -5,14 +5,14 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>NexStore | Register</title>
+    <title>RAMCORE | Register</title>
     <link rel="stylesheet" href="assets/css/global.css">
     <link rel="stylesheet" href="assets/css/login.css">
 </head>
 
 <body>
     <nav id="navbar" class="scrolled">
-        <div class="logo">NexStore</div>
+        <div class="logo">RAMCORE</div>
         <ul class="nav-links">
             <li><a href="index.php">Home</a></li>
             <li><a href="index.php#products">Products</a></li>

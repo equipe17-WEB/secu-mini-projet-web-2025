@@ -15,7 +15,7 @@ if ($id > 0) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NexStore | <?php echo $product ? htmlspecialchars($product['name']) : 'Product Not Found'; ?></title>
+    <title>RAMCORE | <?php echo $product ? htmlspecialchars($product['name']) : 'Product Not Found'; ?></title>
     <link rel="stylesheet" href="assets/css/global.css">
     <link rel="stylesheet" href="assets/css/product.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
@@ -24,7 +24,7 @@ if ($id > 0) {
 
 <body>
     <nav id="navbar" class="scrolled">
-        <div class="logo">NexStore</div>
+        <div class="logo">RAMCORE</div>
         <ul class="nav-links">
             <li><a href="index.php">Home</a></li>
             <li><a href="index.php#products">Products</a></li>
