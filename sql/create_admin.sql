@@ -10,4 +10,4 @@ INSERT INTO `users` (`username`, `email`, `password`, `role`) VALUES
 -- This password hash is for 'admin123'
 -- You can login with:
 -- Username: admin
--- Password: admin123
+-- Password: password
