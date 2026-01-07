@@ -55,8 +55,16 @@ function updateQty(id, delta) {
 
 async function checkout() {
     if (cart.length === 0) {
-        alert('Your cart is empty!');
+        if (typeof showToast === 'function') {
+            showToast('Your cart is empty!', 'error');
+        } else {
+            alert('Your cart is empty!');
+        }
         return;
+    }
+
+    if (typeof showToast === 'function') {
+        showToast('Processing your order...', 'info');
     }
 
     try {
@@ -69,7 +77,11 @@ async function checkout() {
         const result = await response.json();
 
         if (result.success) {
-            alert('✅ ' + result.message);
+            if (typeof showToast === 'function') {
+                showToast(result.message, 'success');
+            } else {
+                alert('✅ ' + result.message);
+            }
             // Clear cart
             cart.length = 0;
             saveCart();
@@ -78,11 +90,20 @@ async function checkout() {
         } else {
             let errorMsg = result.message;
             if (result.errors && result.errors.length > 0) {
-                errorMsg += '\n\n' + result.errors.join('\n');
+                errorMsg += ': ' + result.errors.join(', ');
             }
-            alert('❌ Checkout Failed:\n\n' + errorMsg);
+
+            if (typeof showToast === 'function') {
+                showToast(errorMsg, 'error');
+            } else {
+                alert('❌ Checkout Failed:\n\n' + errorMsg);
+            }
         }
     } catch (error) {
-        alert('Server error. Please try again.');
+        if (typeof showToast === 'function') {
+            showToast('Server error. Please try again.', 'error');
+        } else {
+            alert('Server error. Please try again.');
+        }
     }
 }

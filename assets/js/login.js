@@ -1,12 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     const toggle = document.getElementById('togglePassword');
-    const password = document.getElementById('password');
+    const passwordInput = document.getElementById('password');
 
-    if (toggle && password) {
+    if (toggle && passwordInput) {
         toggle.addEventListener('click', () => {
-            const type = password.type === 'password' ? 'text' : 'password';
-            password.type = type;
+            const type = passwordInput.type === 'password' ? 'text' : 'password';
+            passwordInput.type = type;
             toggle.textContent = type === 'password' ? '👁' : '🙈';
         });
     }
@@ -19,10 +19,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const username = document.getElementById('username').value;
         const pwd = document.getElementById('password').value;
-        const message = document.getElementById('login-message');
 
-        message.textContent = 'Logging in...';
-        message.style.color = 'black';
+        if (typeof showToast === 'function') {
+            showToast('Logging in...', 'info');
+        }
 
         fetch('api/login.php', {
             method: 'POST',
@@ -33,10 +33,10 @@ document.addEventListener('DOMContentLoaded', () => {
         })
             .then(res => res.json())
             .then(data => {
-                message.textContent = data.message;
-                message.style.color = data.success ? '#10b981' : '#ef4444';
-
                 if (data.success) {
+                    if (typeof showToast === 'function') {
+                        showToast('Login successful!', 'success');
+                    }
                     setTimeout(() => {
                         if (data.role === 'admin') {
                             window.location.href = 'admin/index.php';
@@ -44,11 +44,20 @@ document.addEventListener('DOMContentLoaded', () => {
                             window.location.href = 'index.php';
                         }
                     }, 800);
+                } else {
+                    if (typeof showToast === 'function') {
+                        showToast(data.message, 'error');
+                    } else {
+                        alert(data.message);
+                    }
                 }
             })
             .catch(() => {
-                message.textContent = 'Server error';
-                message.style.color = 'red';
+                if (typeof showToast === 'function') {
+                    showToast('Server error', 'error');
+                } else {
+                    alert('Server error');
+                }
             });
     });
 });

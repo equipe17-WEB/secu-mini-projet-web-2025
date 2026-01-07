@@ -18,7 +18,7 @@ if ($username && $password) {
 
         if ($user) {
 
-            if (password_verify($password, $user['password']) || $password === $user['password']) {
+            if (password_verify($password, $user['password'])) {
                 $_SESSION['user_id'] = $user['id'];
                 $_SESSION['username'] = $user['username'];
                 $_SESSION['role'] = $user['role'];

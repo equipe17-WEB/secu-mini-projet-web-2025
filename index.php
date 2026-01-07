@@ -45,10 +45,21 @@
                 <select id="category-filter"
                     style="padding: 0.75rem 1rem; border-radius: 12px; border: 1px solid var(--glass-border); background: var(--bg-card); color: white; outline: none;">
                     <option value="all">All Categories</option>
-                    <option value="Men">Men</option>
-                    <option value="Women">Women</option>
-                    <option value="Accessories">Accessories</option>
+                    <?php
+                    require_once 'config/db.php';
+                    $stmt_cats = $pdo->query("SELECT name FROM categories");
+                    while ($cat = $stmt_cats->fetch()) {
+                        echo '<option value="' . htmlspecialchars($cat['name']) . '">' . htmlspecialchars($cat['name']) . '</option>';
+                    }
+                    ?>
                 </select>
+                <div style="display: flex; gap: 0.5rem; align-items: center;">
+                    <input type="number" id="min-price" placeholder="Min $"
+                        style="width: 80px; padding: 0.75rem; border-radius: 12px; border: 1px solid var(--glass-border); background: var(--bg-card); color: white; outline: none;">
+                    <span style="color: var(--text-secondary);">to</span>
+                    <input type="number" id="max-price" placeholder="Max $"
+                        style="width: 80px; padding: 0.75rem; border-radius: 12px; border: 1px solid var(--glass-border); background: var(--bg-card); color: white; outline: none;">
+                </div>
             </div>
 
             <div id="product-list" class="grid">
