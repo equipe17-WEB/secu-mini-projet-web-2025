@@ -8,7 +8,7 @@ try {
     // Create new admin user
     $password = password_hash('admin123', PASSWORD_DEFAULT);
     $stmt = $pdo->prepare("INSERT INTO users (username, email, password, role) VALUES (?, ?, ?, ?)");
-    $stmt->execute(['admin', 'admin@nexstore.com', $password, 'admin']);
+    $stmt->execute(params: ['admin', 'admin@nexstore.com', $password, 'admin']);
 
     echo "✅ Admin user created successfully!<br><br>";
     echo "<strong>Login Credentials:</strong><br>";

@@ -14,3 +14,6 @@ start:
 	@echo "Database is up. Applying schema..."
 	docker compose exec -T db mysql -u $(DB_USER) -p$(DB_PASSWORD) $(DB_NAME) < $(SQL_FILE)
 	@echo "Done."
+	docker compose exec -T db mysql -uuser -ppassword db < sql/create_admin.sql
+	php -S localhost:8000
+
