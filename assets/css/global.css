@@ -41,23 +41,46 @@ body {
     box-shadow: var(--shadow-glass);
 }
 
-/* Navbar */
+/* Dynamic Navbar */
 nav {
     position: fixed;
-    top: 0;
-    width: 100%;
+    top: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    min-width: fit-content;
     z-index: 1000;
-    padding: 1.5rem 5%;
+    padding: 0.8rem 2.5rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 4rem;
+    /* Content starts closer together */
     align-items: center;
-    transition: all 0.3s ease;
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    background: rgba(30, 30, 30, 0.4);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    border-radius: 99px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 nav.scrolled {
-    background: rgba(15, 23, 42, 0.8);
-    backdrop-filter: blur(10px);
+    top: 0;
+    left: 0;
+    transform: translateX(0);
+    width: 100%;
+    border-radius: 0;
     padding: 1rem 5%;
+    justify-content: space-between;
+    gap: 0;
+    /* Content pushes to edges */
+    background: rgba(10, 10, 10, 0.9);
+    border-bottom: 1px solid var(--glass-border);
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 
 .logo {

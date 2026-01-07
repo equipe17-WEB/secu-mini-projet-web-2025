@@ -11,55 +11,62 @@
 </head>
 
 <body>
+    <nav id="navbar" class="scrolled">
+        <div class="logo">NexStore</div>
+        <ul class="nav-links">
+            <li><a href="index.php">Home</a></li>
+            <li><a href="index.php#products">Products</a></li>
+            <li><a href="cart.php">Cart</a></li>
+            <li><a href="login.php">Login</a></li>
+        </ul>
+    </nav>
+    <div class="auth-card">
+        <div class="auth-left">
+            <h2>Create Account</h2>
+            <p class="subtitle">Join NexStore community</p>
 
-    <div class="auth-wrapper">
-        <div class="auth-card">
-            <div class="auth-left">
-                <h2>Create Account</h2>
-                <p class="subtitle">Join NexStore community</p>
+            <form id="register-form">
+                <div class="input-group">
+                    <span class="icon">👤</span>
+                    <input type="text" id="username" placeholder="Username" required>
+                </div>
 
-                <form id="register-form">
-                    <div class="input-group">
-                        <span class="icon">👤</span>
-                        <input type="text" id="username" placeholder="Username" required>
-                    </div>
+                <div class="input-group">
+                    <span class="icon">📧</span>
+                    <input type="email" id="email" placeholder="Email" required>
+                </div>
 
-                    <div class="input-group">
-                        <span class="icon">📧</span>
-                        <input type="email" id="email" placeholder="Email" required>
-                    </div>
+                <div class="input-group">
+                    <span class="icon">🔒</span>
+                    <input type="password" placeholder="Password" id="password" required>
+                </div>
 
-                    <div class="input-group">
-                        <span class="icon">🔒</span>
-                        <input type="password" placeholder="Password" id="password" required>
-                    </div>
+                <div class="input-group">
+                    <span class="icon">🔒</span>
+                    <input type="password" placeholder="Confirm Password" id="confirm-password" required>
+                </div>
 
-                    <div class="input-group">
-                        <span class="icon">🔒</span>
-                        <input type="password" placeholder="Confirm Password" id="confirm-password" required>
-                    </div>
+                <p id="register-message"></p>
 
-                    <p id="register-message"></p>
+                <button type="submit" class="btn-login">Register</button>
 
-                    <button type="submit" class="btn-login">Register</button>
-
-                    <p style="margin-top: 1rem; font-size: 0.9rem;">
-                        Already have an account? <a href="login.php" style="color: var(--primary);">Login here</a>
-                    </p>
-                </form>
-            </div>
-
-            <div class="auth-right">
-                <h2>Join Us!</h2>
-                <p>
-                    Create an account to track your orders, save your cart, and get personalized recommendations.
+                <p style="margin-top: 1rem; font-size: 0.9rem;">
+                    Already have an account? <a href="login.php" style="color: var(--primary);">Login here</a>
                 </p>
-            </div>
+            </form>
         </div>
+
+        <div class="auth-right">
+            <h2>Join Us!</h2>
+            <p>
+                Create an account to track your orders, save your cart, and get personalized recommendations.
+            </p>
+        </div>
+    </div>
     </div>
 
     <script src="assets/js/app.js"></script>
-<script src="assets/js/register.js"></script>
+    <script src="assets/js/register.js"></script>
 
 </body>
 
