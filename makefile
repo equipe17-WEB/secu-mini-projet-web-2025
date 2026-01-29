@@ -15,5 +15,7 @@ start:
 	docker compose exec -T db mysql -u $(DB_USER) -p$(DB_PASSWORD) $(DB_NAME) < $(SQL_FILE)
 	@echo "Done."
 	docker compose exec -T db mysql -uuser -ppassword db < sql/create_admin.sql
+	@echo "Running migrations..."
+	php migrate.php
 	php -S localhost:8000
 
